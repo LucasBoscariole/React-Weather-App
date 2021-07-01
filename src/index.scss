@@ -1,7 +1,10 @@
+$clr-background: #ececec;
+$clr-content: #c9c9c9;
+$clr-white: #fff;
 body {
   margin: 0;
   padding: 0;
-  background: #ececec;
+  background: $clr-background;
 }
 
 main {
@@ -9,47 +12,37 @@ main {
   margin-top: 10vh;
   width: 60%;
   height: 72vh;
-  background: #c9c9c9;
+  background: $clr-content;
   border-radius: 40px;
-  display: -ms-grid;
   display: grid;
   text-align: center;
 }
 
 section {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
+  align-items: center;
+  justify-content: space-around;
   width: 80%;
   margin: 0 auto;
 }
 
 .input {
   height: 50px;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  align-items: center;
 }
 
 .search-name {
   width: 300px;
   height: 40px;
-  background: #fff;
+  background: $clr-white;
   outline: none;
   border: none;
   padding-left: 20px;
 }
 
 .search-btn {
-  background: #fff;
+  background: $clr-white;
   color: #000;
   width: 45px;
   height: 42px;
@@ -57,7 +50,6 @@ section {
   cursor: pointer;
   font-size: 1.1rem;
 }
-
 @media screen and (max-width: 1000px) {
   main {
     margin-top: 7vh;
@@ -81,4 +73,3 @@ section {
     font-size: 1rem;
   }
 }
-/*# sourceMappingURL=index.css.map */
