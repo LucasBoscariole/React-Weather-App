@@ -1,16 +1,17 @@
 import React, { useState, useContext, useEffect } from 'react';
 import axios from 'axios';
 
-const url =
-  'api.openweathermap.org/data/2.5/forecast?q=london&appid=9765421ef06153319258cbb3b0e6803d';
+const url = `api.openweathermap.org/data/2.5/forecast?q=london&appid=${REACT_APP_API_KEY}`;
 const AppContext = React.createContext();
 
 // api.openweathermap.org/data/2.5/forecast?q={city name}&appid={API key}
+// 9765421ef06153319258cbb3b0e6803d
 
 const AppProvider = ({ children }) => {
   const fetchWeather = async (url) => {
     const response = await axios(url).catch((err) => console.log(err));
     console.log(response);
+    console.log(REACT_APP_API_KEY);
   };
   useEffect(() => {
     fetchWeather(url);
