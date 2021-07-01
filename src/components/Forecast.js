@@ -1,5 +1,14 @@
 import React from 'react';
 import { useGlobalContext } from '../context';
+import {
+  FaSun,
+  FaCloudSun,
+  FaCloud,
+  FaCloudRain,
+  FaCloudSunRain,
+  FaSnowflake,
+} from 'react-icons/fa';
+import { IoThunderstormSharp } from 'react-icons/io5';
 
 function Forecast() {
   const { forecast } = useGlobalContext();

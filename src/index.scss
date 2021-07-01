@@ -1,6 +1,7 @@
 $clr-background: #fcfcfc;
 $clr-content: #e3e3e3;
-
+$clr-title: #1a1a1a;
+$clr-subtitle: #4d4d4d;
 body {
   margin: 0;
   padding: 0;
@@ -60,7 +61,7 @@ main {
         align-items: center;
         justify-content: center;
         border-color: transparent;
-        background: $clr-background;
+        background: #878787;
         border-radius: 0 5px 5px 0;
       }
     }
@@ -132,7 +133,7 @@ main {
     }
     .card-forecast {
       width: 90%;
-      height: 30%;
+      height: 27%;
       border-radius: 10px;
       margin: 0 auto;
     }
