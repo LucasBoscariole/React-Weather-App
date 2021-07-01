@@ -6,9 +6,11 @@ import Input from './components/Input';
 function App() {
   return (
     <main>
-      <Infoday />
-      <Forecast />
-      <Input />
+      <article>
+        <Infoday />
+        <Forecast />
+        <Input />
+      </article>
     </main>
   );
 }

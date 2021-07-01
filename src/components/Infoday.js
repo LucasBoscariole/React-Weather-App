@@ -1,11 +1,22 @@
 import React from 'react';
 import { useGlobalContext } from '../context';
+
 function Infoday() {
-  return (
-    <section>
-      <h1>InfoDay</h1>
-    </section>
-  );
+  const { data } = useGlobalContext();
+  if (data) {
+    const { temp, feels_like, temp_min, temp_max, humidity } = data.main;
+    const name = data.name;
+    const { speed } = data.wind;
+    const { description, icon } = data.weather[0];
+    return (
+      <section className='section-infoday'>
+        <div className='cart-infoday'></div>
+        <div className='cart-infoday-2'></div>
+      </section>
+    );
+  } else {
+    return <section className='section-infoday'></section>;
+  }
 }
 
 export default Infoday;

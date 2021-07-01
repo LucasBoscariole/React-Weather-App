@@ -1,23 +1,41 @@
 import React, { useState, useContext, useEffect } from 'react';
 import axios from 'axios';
 
-const url = `api.openweathermap.org/data/2.5/forecast?q=london&appid=${REACT_APP_API_KEY}`;
+const apikey = process.env.REACT_APP_API_KEY;
+const url = `https://api.openweathermap.org/data/2.5/weather?q=London&units=metric&appid=${apikey}`;
 const AppContext = React.createContext();
 
-// api.openweathermap.org/data/2.5/forecast?q={city name}&appid={API key}
-// 9765421ef06153319258cbb3b0e6803d
-
 const AppProvider = ({ children }) => {
-  const fetchWeather = async (url) => {
-    const response = await axios(url).catch((err) => console.log(err));
-    console.log(response);
-    console.log(REACT_APP_API_KEY);
+  const [forecast, setForecast] = useState();
+  const [loading, setLoading] = useState(false);
+  const [data, setData] = useState();
+  const fetchWeather = async () => {
+    try {
+      //Day
+      const response = await axios(url);
+      const data = response.data;
+      const { lat, lon } = data.coord;
+      setData(data);
+
+      //Forecast
+      const url_forecast = `http://api.openweathermap.org/data/2.5/onecall?lat=${lat}&lon=${lon}&units=metric&exclude=current,minutely,hourly,alerts&appid=${apikey}`;
+      const forecast = await axios(url_forecast);
+      const daily_forecast = forecast.data.daily.slice(0, 3);
+      setForecast(daily_forecast);
+    } catch (error) {
+      console.log(error);
+    }
   };
+
   useEffect(() => {
-    fetchWeather(url);
+    fetchWeather();
   }, []);
 
-  return <AppContext.Provider value='hi'>{children}</AppContext.Provider>;
+  return (
+    <AppContext.Provider value={{ forecast, loading, data }}>
+      {children}
+    </AppContext.Provider>
+  );
 };
 
 export const useGlobalContext = () => {
