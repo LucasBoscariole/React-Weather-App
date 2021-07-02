@@ -2,13 +2,14 @@ import React, { useState, useContext, useEffect } from 'react';
 import axios from 'axios';
 
 const apikey = process.env.REACT_APP_API_KEY;
-const url = `https://api.openweathermap.org/data/2.5/weather?q=London&units=metric&appid=${apikey}`;
 const AppContext = React.createContext();
 
 const AppProvider = ({ children }) => {
   const [forecast, setForecast] = useState();
   const [loading, setLoading] = useState(false);
   const [data, setData] = useState();
+  const [query, setQuery] = useState('London');
+  const url = `https://api.openweathermap.org/data/2.5/weather?q=${query}&units=metric&appid=${apikey}`;
   const fetchWeather = async () => {
     try {
       //Day
@@ -22,6 +23,9 @@ const AppProvider = ({ children }) => {
       const forecast = await axios(url_forecast);
       const daily_forecast = forecast.data.daily.slice(0, 3);
       setForecast(daily_forecast);
+
+      console.log(data);
+      console.log(forecast);
     } catch (error) {
       console.log(error);
     }
@@ -29,10 +33,10 @@ const AppProvider = ({ children }) => {
 
   useEffect(() => {
     fetchWeather();
-  }, []);
+  }, [query]);
 
   return (
-    <AppContext.Provider value={{ forecast, loading, data }}>
+    <AppContext.Provider value={{ forecast, loading, data, setQuery, query }}>
       {children}
     </AppContext.Provider>
   );

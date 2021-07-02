@@ -1,0 +1,50 @@
+.input-container {
+  display: flex;
+  justify-content: center;
+  .input {
+    margin-top: 6vh;
+    background: #fff;
+    outline: none;
+    border: none;
+    padding-left: 20px;
+    border-radius: 10px 0 0 10px;
+  }
+  .btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    outline: none;
+    border: none;
+    background: #9e9e9e;
+    width: 10%;
+    margin-top: 6vh;
+    border-radius: 0 10px 10px 0;
+    cursor: pointer;
+  }
+}
+
+@media screen and (min-width: 1001px) {
+  .input {
+    width: 60%;
+    height: 32px;
+    .btn {
+      height: 38px;
+    }
+    .icon-btn {
+      font-size: 1.8rem;
+    }
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  .input {
+    width: 70%;
+    height: 30px;
+    .btn {
+      height: 34px;
+    }
+    .icon-btn {
+      font-size: 1rem;
+    }
+  }
+}

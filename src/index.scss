@@ -1,154 +1,21 @@
-$clr-background: #fcfcfc;
-$clr-content: #e3e3e3;
-$clr-title: #1a1a1a;
-$clr-subtitle: #4d4d4d;
+@import './style/forecast', './style/infoday', './style/input';
 body {
   margin: 0;
   padding: 0;
 }
 
-main {
+.background {
   width: 100%;
   height: 100vh;
-  background: $clr-background;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  article {
-    background: $clr-content;
-    .section-infoday {
-      height: 40%;
-      width: 90%;
-      margin: 0 auto;
-      display: flex;
-
-      justify-content: space-around;
-      .cart-infoday,
-      .cart-infoday-2 {
-        background: #fff;
-      }
-    }
-    .section-forecast {
-      width: 90%;
-      margin: 0 auto;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      flex-wrap: wrap;
-      .card-forecast {
-        background: #fff;
-        border: 10px;
-      }
-    }
-    .section-input {
-      display: flex;
-      justify-content: center;
-      .input {
-        margin: 0 auto;
-        width: 90%;
-        display: flex;
-        justify-content: center;
-      }
-      .search-name {
-        outline: none;
-        border-color: transparent;
-        border-radius: 5px 0 0 5px;
-        padding-left: 20px;
-        background: #fff;
-      }
-      .search-btn {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        border-color: transparent;
-        background: #878787;
-        border-radius: 0 5px 5px 0;
-      }
-    }
-  }
+  background: url(./background.jpg) no-repeat center center fixed;
+  background-size: cover;
+  text-align: center;
 }
 
 @media screen and (min-width: 1001px) {
-  article {
-    border-radius: 30px;
-    width: 55%;
-    height: 70vh;
-    .input {
-      align-items: flex-start;
-      margin-top: 4vh;
-    }
-    .section-infoday {
-      align-items: flex-end;
-    }
-    .cart-infoday,
-    .cart-infoday-2 {
-      width: 300px;
-      height: 180px;
-      border-radius: 10px;
-    }
-    .section-forecast {
-      height: 40%;
-    }
-    .card-forecast {
-      width: 220px;
-      height: 140px;
-      border-radius: 10px;
-    }
-    .section-input {
-      height: 20%;
-    }
-    .search-name {
-      width: 300px;
-      height: 30px;
-    }
-    .search-btn {
-      width: 42px;
-      height: 36px;
-    }
-  }
 }
 
 @media screen and (max-width: 1000px) {
-  article {
-    border-radius: 20px;
-    width: 90%;
-    height: 90vh;
-    .input {
-      align-items: center;
-    }
-    .section-infoday {
-      align-items: center;
-    }
-    .cart-infoday {
-      width: 90%;
-      height: 70%;
-      border-radius: 10px;
-    }
-    .cart-infoday-2 {
-      display: none;
-      visibility: none;
-    }
-    .section-forecast {
-      height: 45%;
-    }
-    .card-forecast {
-      width: 90%;
-      height: 27%;
-      border-radius: 10px;
-      margin: 0 auto;
-    }
-    .section-input {
-      height: 15%;
-    }
-    .search-name {
-      width: calc(80% - 26px);
-      height: 24px;
-    }
-    .search-btn {
-      width: 26px;
-      height: 30px;
-    }
-  }
 }
 
 // .loader {

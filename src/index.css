@@ -1,195 +1,118 @@
+.sun {
+  color: #eb8100;
+}
+
+.cloud-sun {
+  color: #d49b00;
+}
+
+.cloud-sun-night,
+.cloud-night,
+.rain-night,
+.storm {
+  color: #c9c9c9;
+}
+
+.cloud,
+.rain,
+.sun-rain,
+.snow {
+  color: #30a2ff;
+}
+
+.input-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.input-container .input {
+  margin-top: 6vh;
+  background: #fff;
+  outline: none;
+  border: none;
+  padding-left: 20px;
+  border-radius: 10px 0 0 10px;
+}
+
+.input-container .btn {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  outline: none;
+  border: none;
+  background: #9e9e9e;
+  width: 10%;
+  margin-top: 6vh;
+  border-radius: 0 10px 10px 0;
+  cursor: pointer;
+}
+
+@media screen and (min-width: 1001px) {
+  .input {
+    width: 60%;
+    height: 32px;
+  }
+  .input .btn {
+    height: 38px;
+  }
+  .input .icon-btn {
+    font-size: 1.8rem;
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  .input {
+    width: 70%;
+    height: 30px;
+  }
+  .input .btn {
+    height: 34px;
+  }
+  .input .icon-btn {
+    font-size: 1rem;
+  }
+}
+
 body {
   margin: 0;
   padding: 0;
 }
 
-main {
+.background {
   width: 100%;
   height: 100vh;
-  background: #fcfcfc;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  background: url(./background.jpg) no-repeat center center fixed;
+  background-size: cover;
+  text-align: center;
 }
 
-main article {
-  background: #e3e3e3;
-}
-
-main article .section-infoday {
-  height: 40%;
-  width: 90%;
-  margin: 0 auto;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
-}
-
-main article .section-infoday .cart-infoday,
-main article .section-infoday .cart-infoday-2 {
-  background: #fff;
-}
-
-main article .section-forecast {
-  width: 90%;
-  margin: 0 auto;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-}
-
-main article .section-forecast .card-forecast {
-  background: #fff;
-  border: 10px;
-}
-
-main article .section-input {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-}
-
-main article .section-input .input {
-  margin: 0 auto;
-  width: 90%;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-}
-
-main article .section-input .search-name {
-  outline: none;
-  border-color: transparent;
-  border-radius: 5px 0 0 5px;
-  padding-left: 20px;
-  background: #fff;
-}
-
-main article .section-input .search-btn {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  border-color: transparent;
-  background: #fcfcfc;
-  border-radius: 0 5px 5px 0;
+.border {
+  border: 1px solid #d9d9d9;
+  border-radius: 20px;
 }
 
 @media screen and (min-width: 1001px) {
-  article {
-    border-radius: 30px;
-    width: 55%;
-    height: 70vh;
-  }
-  article .input {
-    -webkit-box-align: start;
-        -ms-flex-align: start;
-            align-items: flex-start;
-    margin-top: 4vh;
-  }
-  article .section-infoday {
-    -webkit-box-align: end;
-        -ms-flex-align: end;
-            align-items: flex-end;
-  }
-  article .cart-infoday,
-  article .cart-infoday-2 {
-    width: 300px;
-    height: 180px;
-    border-radius: 10px;
-  }
-  article .section-forecast {
-    height: 40%;
-  }
-  article .card-forecast {
-    width: 220px;
-    height: 140px;
-    border-radius: 10px;
-  }
-  article .section-input {
-    height: 20%;
-  }
-  article .search-name {
-    width: 300px;
-    height: 30px;
-  }
-  article .search-btn {
-    width: 42px;
-    height: 36px;
+  .border {
+    width: 70%;
+    height: 60vh;
   }
 }
 
 @media screen and (max-width: 1000px) {
-  article {
-    border-radius: 20px;
+  .border {
+    margin: 5vh auto;
     width: 90%;
-    height: 90vh;
-  }
-  article .input {
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-  }
-  article .section-infoday {
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-  }
-  article .cart-infoday {
-    width: 90%;
-    height: 70%;
-    border-radius: 10px;
-  }
-  article .cart-infoday-2 {
-    display: none;
-    visibility: none;
-  }
-  article .section-forecast {
-    height: 45%;
-  }
-  article .card-forecast {
-    width: 90%;
-    height: 30%;
-    border-radius: 10px;
-    margin: 0 auto;
-  }
-  article .section-input {
-    height: 15%;
-  }
-  article .search-name {
-    width: calc(80% - 26px);
-    height: 24px;
-  }
-  article .search-btn {
-    width: 26px;
-    height: 30px;
+    height: 80vh;
   }
 }
 /*# sourceMappingURL=index.css.map */

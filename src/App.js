@@ -5,12 +5,12 @@ import Input from './components/Input';
 
 function App() {
   return (
-    <main>
-      <article>
+    <main className='background'>
+      <Input />
+      <section>
         <Infoday />
         <Forecast />
-        <Input />
-      </article>
+      </section>
     </main>
   );
 }

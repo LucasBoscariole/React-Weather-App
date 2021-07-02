@@ -1,0 +1,23 @@
+.sun {
+  color: #eb8100;
+}
+.cloud-sun {
+  color: #d49b00;
+}
+.cloud-sun-night,
+.cloud-night,
+.rain-night,
+.storm {
+  color: #c9c9c9;
+}
+.cloud,
+.rain,
+.sun-rain,
+.snow {
+  color: #30a2ff;
+}
+
+@media screen and (min-width: 1001px) {
+}
+@media screen and (max-width: 1000px) {
+}
