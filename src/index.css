@@ -1,3 +1,101 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@1,300&display=swap");
+.container-day {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-top: 10vh;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.container-day .container-icon {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.container-day .line {
+  width: 3px;
+  border-radius: 5px;
+  background: #f2f2f2;
+}
+
+.container-day .container-info {
+  margin: 0;
+  text-align: left;
+}
+
+.container-day .container-info h2 {
+  margin: 0;
+  font-weight: bold;
+  text-transform: capitalize;
+  letter-spacing: 2px;
+}
+
+.container-day .container-info h2 span {
+  text-transform: capitalize;
+}
+
+.container-day .container-info h3 {
+  text-transform: capitalize;
+  letter-spacing: 1px;
+  font-weight: 600;
+}
+
+.container-day .container-info h4 {
+  text-transform: capitalize;
+  letter-spacing: 2px;
+  font-weight: 600;
+  color: #f2f2f2;
+}
+
+.container-day .container-info p {
+  text-transform: capitalize;
+  margin: 5px 0 10px 0;
+  letter-spacing: 1.3px;
+  font-weight: 400;
+  color: #f2f2f2;
+}
+
+.container-day .container-info .desc {
+  margin: 10px 0 10px 0;
+  font-weight: 600;
+  color: #f0f0f0;
+}
+
+.container-day .container-info .flex-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 120%;
+  height: 40px;
+}
+
+.color-title {
+  color: #f7f7f7;
+}
+
+.color-subtitle {
+  color: #ebebeb;
+}
+
 .sun {
   color: #eb8100;
 }
@@ -20,6 +118,77 @@
   color: #30a2ff;
 }
 
+@media screen and (min-width: 1001px) {
+  .line {
+    height: 250px;
+    margin: 0 100px;
+  }
+  .icon {
+    font-size: 12.5rem;
+  }
+  h2 {
+    font-size: 3rem;
+  }
+  h3 {
+    font-size: 1.9rem;
+  }
+  h4 {
+    font-size: 1.6rem;
+  }
+  p {
+    font-size: 1.2rem;
+  }
+  .desc {
+    font-size: 2rem;
+  }
+  .temp {
+    font-size: 2.7rem;
+  }
+  .flex-container {
+    margin: 25px 0 0 0;
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  .container-day {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: row-reverse;
+            flex-direction: row-reverse;
+  }
+  .container-icon {
+    margin-bottom: 10vh;
+  }
+  .line {
+    display: none;
+    visibility: hidden;
+  }
+  .icon {
+    font-size: 5rem;
+  }
+  h2 {
+    font-size: 2rem;
+  }
+  h3 {
+    font-size: 1.3rem;
+  }
+  h4 {
+    font-size: 1.2rem;
+  }
+  p {
+    font-size: 0.85rem;
+  }
+  .desc {
+    font-size: 1.2rem;
+  }
+  .temp {
+    font-size: 1.6rem;
+  }
+  .flex-container {
+    margin: 18px 0 0 0;
+  }
+}
+
 .input-container {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -36,6 +205,8 @@
   border: none;
   padding-left: 20px;
   border-radius: 10px 0 0 10px;
+  letter-spacing: 2px;
+  text-transform: capitalize;
 }
 
 .input-container .btn {
@@ -50,8 +221,7 @@
           justify-content: center;
   outline: none;
   border: none;
-  background: #9e9e9e;
-  width: 10%;
+  background: #e6e6e6;
   margin-top: 6vh;
   border-radius: 0 10px 10px 0;
   cursor: pointer;
@@ -60,26 +230,28 @@
 @media screen and (min-width: 1001px) {
   .input {
     width: 60%;
-    height: 32px;
-  }
-  .input .btn {
     height: 38px;
   }
-  .input .icon-btn {
-    font-size: 1.8rem;
+  .btn {
+    height: 40px;
+    width: 5%;
+  }
+  .btn svg {
+    font-size: 1.5rem;
   }
 }
 
 @media screen and (max-width: 1000px) {
   .input {
     width: 70%;
-    height: 30px;
-  }
-  .input .btn {
     height: 34px;
   }
-  .input .icon-btn {
-    font-size: 1rem;
+  .btn {
+    height: 36px;
+    width: 10%;
+  }
+  .btn svg {
+    font-size: 1.3rem;
   }
 }
 
@@ -92,27 +264,9 @@ body {
   width: 100%;
   height: 100vh;
   background: url(./background.jpg) no-repeat center center fixed;
+  background-color: rgba(0, 0, 0, 0.5);
+  background-blend-mode: multiply;
   background-size: cover;
   text-align: center;
-}
-
-.border {
-  border: 1px solid #d9d9d9;
-  border-radius: 20px;
-}
-
-@media screen and (min-width: 1001px) {
-  .border {
-    width: 70%;
-    height: 60vh;
-  }
-}
-
-@media screen and (max-width: 1000px) {
-  .border {
-    margin: 5vh auto;
-    width: 90%;
-    height: 80vh;
-  }
 }
 /*# sourceMappingURL=index.css.map */
