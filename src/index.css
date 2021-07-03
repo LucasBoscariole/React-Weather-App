@@ -1,4 +1,88 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@1,300&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@1,300&display=swap");
+.card-forecast {
+  margin: 0 auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.card-forecast .card-container {
+  background: rgba(255, 255, 255, 0.4);
+}
+
+.card-forecast .icon-forecast {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 100%;
+  height: 60%;
+}
+
+.card-forecast .temperature {
+  text-align: center;
+}
+
+.card-forecast .temperature h4 {
+  letter-spacing: 1px;
+  font-weight: 500;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.card-forecast .temperature h4 span {
+  font-weight: bold;
+}
+
+@media screen and (min-width: 1001px) {
+  .card-forecast {
+    width: 70%;
+    height: 300px;
+  }
+  .card-container {
+    width: 180px;
+    height: 220px;
+    border-radius: 13px;
+  }
+  .temperature h4 {
+    font-size: 1rem;
+  }
+  .temperature h4 span {
+    font-size: 1.4rem;
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  .card-forecast {
+    width: 90%;
+    min-height: 200px;
+  }
+  .card-container {
+    width: 150px;
+    height: 180px;
+    border-radius: 10px;
+  }
+  .temperature h4 {
+    font-size: 0.85rem;
+  }
+  .temperature h4 span {
+    font-size: 1.2rem;
+  }
+}
+
 .container-day {
   display: -webkit-box;
   display: -ms-flexbox;
