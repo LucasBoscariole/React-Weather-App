@@ -8,7 +8,7 @@ const AppProvider = ({ children }) => {
   const [forecast, setForecast] = useState();
   const [loading, setLoading] = useState(false);
   const [data, setData] = useState();
-  const [query, setQuery] = useState('London');
+  const [query, setQuery] = useState('California');
   const url = `https://api.openweathermap.org/data/2.5/weather?q=${query}&units=metric&appid=${apikey}`;
   const fetchWeather = async () => {
     try {

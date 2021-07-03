@@ -1,7 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@1,300&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@1,300&display=swap");
-.card-forecast {
-  margin: 0 auto;
+.section-forecast {
+  margin: 5vh auto 0 auto;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -13,13 +13,15 @@
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  font-family: 'Montserrat', sans-serif;
 }
 
-.card-forecast .card-container {
-  background: rgba(255, 255, 255, 0.4);
+.section-forecast .card-container {
+  background: rgba(255, 255, 255, 0.3);
+  margin-bottom: 20px;
 }
 
-.card-forecast .icon-forecast {
+.section-forecast .icon-forecast {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -33,23 +35,27 @@
   height: 60%;
 }
 
-.card-forecast .temperature {
+.section-forecast .temperature {
   text-align: center;
 }
 
-.card-forecast .temperature h4 {
-  letter-spacing: 1px;
+.section-forecast .temperature h3 {
+  letter-spacing: 2px;
   font-weight: 500;
-  font-family: 'Montserrat', sans-serif;
+  text-transform: capitalize;
+  color: #f7f7f7;
+  margin: 6px 0;
 }
 
-.card-forecast .temperature h4 span {
-  font-weight: bold;
+.section-forecast .temperature span {
+  letter-spacing: 1px;
+  font-weight: 500;
+  color: #ebebeb;
 }
 
 @media screen and (min-width: 1001px) {
-  .card-forecast {
-    width: 70%;
+  .section-forecast {
+    width: 60%;
     height: 300px;
   }
   .card-container {
@@ -57,28 +63,28 @@
     height: 220px;
     border-radius: 13px;
   }
-  .temperature h4 {
+  .temperature h3 {
     font-size: 1rem;
   }
-  .temperature h4 span {
+  .temperature span {
     font-size: 1.4rem;
   }
 }
 
 @media screen and (max-width: 1000px) {
-  .card-forecast {
+  .section-forecast {
     width: 90%;
-    min-height: 200px;
+    height: 300px;
   }
   .card-container {
-    width: 150px;
-    height: 180px;
+    width: 140px;
+    height: 170px;
     border-radius: 10px;
   }
-  .temperature h4 {
+  .temperature h3 {
     font-size: 0.85rem;
   }
-  .temperature h4 span {
+  .temperature span {
     font-size: 1.2rem;
   }
 }
@@ -112,7 +118,7 @@
 .container-day .line {
   width: 3px;
   border-radius: 5px;
-  background: #f2f2f2;
+  background: #8d8888;
 }
 
 .container-day .container-info {

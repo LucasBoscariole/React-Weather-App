@@ -1,12 +1,14 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@1,300&display=swap');
-.card-forecast {
-  margin: 0 auto;
+.section-forecast {
+  margin: 5vh auto 0 auto;
   display: flex;
   flex-wrap: wrap;
   align-items: center;
   justify-content: space-between;
+  font-family: 'Montserrat', sans-serif;
   .card-container {
-    background: rgba(255, 255, 255, 0.4);
+    background: rgba(255, 255, 255, 0.3);
+    margin-bottom: 20px;
   }
   .icon-forecast {
     display: flex;
@@ -17,21 +19,24 @@
   }
   .temperature {
     text-align: center;
-    h4 {
+    h3 {
+      letter-spacing: 2px;
+      font-weight: 500;
+      text-transform: capitalize;
+      color: #f7f7f7;
+      margin: 6px 0;
+    }
+    span {
       letter-spacing: 1px;
       font-weight: 500;
-      font-family: 'Montserrat', sans-serif;
-
-      span {
-        font-weight: bold;
-      }
+      color: #ebebeb;
     }
   }
 }
 
 @media screen and (min-width: 1001px) {
-  .card-forecast {
-    width: 70%;
+  .section-forecast {
+    width: 60%;
     height: 300px;
   }
   .card-container {
@@ -40,31 +45,31 @@
     border-radius: 13px;
   }
   .temperature {
-    h4 {
+    h3 {
       font-size: 1rem;
-      span {
-        font-size: 1.4rem;
-      }
+    }
+    span {
+      font-size: 1.4rem;
     }
   }
 }
 
 @media screen and (max-width: 1000px) {
-  .card-forecast {
+  .section-forecast {
     width: 90%;
-    min-height: 200px;
+    height: 300px;
   }
   .card-container {
-    width: 150px;
-    height: 180px;
+    width: 140px;
+    height: 170px;
     border-radius: 10px;
   }
   .temperature {
-    h4 {
+    h3 {
       font-size: 0.85rem;
-      span {
-        font-size: 1.2rem;
-      }
+    }
+    span {
+      font-size: 1.2rem;
     }
   }
 }
