@@ -10,6 +10,11 @@
     background: rgba(255, 255, 255, 0.3);
     margin-bottom: 20px;
   }
+  .day {
+    font-weight: 500;
+    letter-spacing: 1px;
+    margin: 15px auto 5px auto;
+  }
   .icon-forecast {
     display: flex;
     align-items: center;
@@ -27,8 +32,8 @@
       margin: 6px 0;
     }
     span {
-      letter-spacing: 1px;
-      font-weight: 500;
+      letter-spacing: 2px;
+      font-weight: 600;
       color: #ebebeb;
     }
   }
@@ -41,15 +46,18 @@
   }
   .card-container {
     width: 180px;
-    height: 220px;
+    min-height: 220px;
     border-radius: 13px;
+  }
+  .icon-forecast-icon {
+    font-size: 6rem;
   }
   .temperature {
     h3 {
-      font-size: 1rem;
+      font-size: 0.9rem;
     }
     span {
-      font-size: 1.4rem;
+      font-size: 1.3rem;
     }
   }
 }
@@ -61,15 +69,18 @@
   }
   .card-container {
     width: 140px;
-    height: 170px;
+    min-height: 170px;
     border-radius: 10px;
+  }
+  .icon-forecast-icon {
+    font-size: 4.2rem;
   }
   .temperature {
     h3 {
-      font-size: 0.85rem;
+      font-size: 0.8rem;
     }
     span {
-      font-size: 1.2rem;
+      font-size: 1.1rem;
     }
   }
 }

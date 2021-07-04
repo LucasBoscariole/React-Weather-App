@@ -2,8 +2,6 @@
 .container-day {
   display: flex;
   align-items: center;
-  justify-content: center;
-  margin-top: 10vh;
   font-family: 'Montserrat', sans-serif;
   .container-icon {
     display: flex;
@@ -18,11 +16,14 @@
   .container-info {
     margin: 0;
     text-align: left;
+    .day-date {
+      font-weight: 500;
+    }
     h2 {
       margin: 0;
       font-weight: bold;
       text-transform: capitalize;
-      letter-spacing: 2px;
+      letter-spacing: 3px;
       span {
         text-transform: capitalize;
       }
@@ -47,7 +48,7 @@
     }
     .desc {
       margin: 10px 0 10px 0;
-      font-weight: 600;
+      font-weight: 500;
       color: #f0f0f0;
     }
     .flex-container {
@@ -87,6 +88,10 @@
 }
 
 @media screen and (min-width: 1001px) {
+  .container-day {
+    justify-content: center;
+    margin: 3vh auto 0 auto;
+  }
   .line {
     height: 250px;
     margin: 0 100px;
@@ -94,31 +99,34 @@
   .icon {
     font-size: 12.5rem;
   }
+  .day-date {
+    font-size: 1.3rem;
+  }
   h2 {
-    font-size: 3rem;
-  }
-  h3 {
-    font-size: 1.9rem;
-  }
-  h4 {
-    font-size: 1.6rem;
-  }
-  p {
-    font-size: 1.2rem;
+    font-size: 2.5rem;
   }
   .desc {
-    font-size: 2rem;
+    font-size: 1.5rem;
   }
-  .temp {
-    font-size: 2.7rem;
+  p {
+    font-size: 1rem;
+  }
+  .temp-min {
+    font-size: 1rem;
+  }
+  .temp-max {
+    font-size: 1.7rem;
   }
   .flex-container {
-    margin: 25px 0 0 0;
+    margin: 20px 0 0 0;
   }
 }
 @media screen and (max-width: 1000px) {
   .container-day {
+    width: 90%;
     flex-direction: row-reverse;
+    justify-content: space-between;
+    margin: 0 auto;
   }
   .container-icon {
     margin-bottom: 10vh;
@@ -131,24 +139,21 @@
     font-size: 5rem;
   }
   h2 {
-    font-size: 2rem;
-  }
-  h3 {
-    font-size: 1.3rem;
-  }
-  h4 {
-    font-size: 1.2rem;
-  }
-  p {
-    font-size: 0.85rem;
+    font-size: 1.7rem;
   }
   .desc {
-    font-size: 1.2rem;
+    font-size: 1rem;
   }
-  .temp {
-    font-size: 1.6rem;
+  p {
+    font-size: 0.8rem;
+  }
+  .temp-min {
+    font-size: 1rem;
+  }
+  .temp-max {
+    font-size: 1.4rem;
   }
   .flex-container {
-    margin: 18px 0 0 0;
+    margin: 15px 0 0 0;
   }
 }

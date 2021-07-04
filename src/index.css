@@ -1,5 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@1,300&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@1,300&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@1,300&display=swap");
 .section-forecast {
   margin: 5vh auto 0 auto;
   display: -webkit-box;
@@ -19,6 +20,12 @@
 .section-forecast .card-container {
   background: rgba(255, 255, 255, 0.3);
   margin-bottom: 20px;
+}
+
+.section-forecast .day {
+  font-weight: 500;
+  letter-spacing: 1px;
+  margin: 15px auto 5px auto;
 }
 
 .section-forecast .icon-forecast {
@@ -48,8 +55,8 @@
 }
 
 .section-forecast .temperature span {
-  letter-spacing: 1px;
-  font-weight: 500;
+  letter-spacing: 2px;
+  font-weight: 600;
   color: #ebebeb;
 }
 
@@ -60,14 +67,17 @@
   }
   .card-container {
     width: 180px;
-    height: 220px;
+    min-height: 220px;
     border-radius: 13px;
   }
+  .icon-forecast-icon {
+    font-size: 6rem;
+  }
   .temperature h3 {
-    font-size: 1rem;
+    font-size: 0.9rem;
   }
   .temperature span {
-    font-size: 1.4rem;
+    font-size: 1.3rem;
   }
 }
 
@@ -78,14 +88,17 @@
   }
   .card-container {
     width: 140px;
-    height: 170px;
+    min-height: 170px;
     border-radius: 10px;
   }
+  .icon-forecast-icon {
+    font-size: 4.2rem;
+  }
   .temperature h3 {
-    font-size: 0.85rem;
+    font-size: 0.8rem;
   }
   .temperature span {
-    font-size: 1.2rem;
+    font-size: 1.1rem;
   }
 }
 
@@ -96,10 +109,6 @@
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  margin-top: 10vh;
   font-family: 'Montserrat', sans-serif;
 }
 
@@ -126,11 +135,15 @@
   text-align: left;
 }
 
+.container-day .container-info .day-date {
+  font-weight: 500;
+}
+
 .container-day .container-info h2 {
   margin: 0;
   font-weight: bold;
   text-transform: capitalize;
-  letter-spacing: 2px;
+  letter-spacing: 3px;
 }
 
 .container-day .container-info h2 span {
@@ -160,7 +173,7 @@
 
 .container-day .container-info .desc {
   margin: 10px 0 10px 0;
-  font-weight: 600;
+  font-weight: 500;
   color: #f0f0f0;
 }
 
@@ -209,6 +222,12 @@
 }
 
 @media screen and (min-width: 1001px) {
+  .container-day {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    margin: 3vh auto 0 auto;
+  }
   .line {
     height: 250px;
     margin: 0 100px;
@@ -216,35 +235,40 @@
   .icon {
     font-size: 12.5rem;
   }
+  .day-date {
+    font-size: 1.3rem;
+  }
   h2 {
-    font-size: 3rem;
-  }
-  h3 {
-    font-size: 1.9rem;
-  }
-  h4 {
-    font-size: 1.6rem;
-  }
-  p {
-    font-size: 1.2rem;
+    font-size: 2.5rem;
   }
   .desc {
-    font-size: 2rem;
+    font-size: 1.5rem;
   }
-  .temp {
-    font-size: 2.7rem;
+  p {
+    font-size: 1rem;
+  }
+  .temp-min {
+    font-size: 1rem;
+  }
+  .temp-max {
+    font-size: 1.7rem;
   }
   .flex-container {
-    margin: 25px 0 0 0;
+    margin: 20px 0 0 0;
   }
 }
 
 @media screen and (max-width: 1000px) {
   .container-day {
+    width: 90%;
     -webkit-box-orient: horizontal;
     -webkit-box-direction: reverse;
         -ms-flex-direction: row-reverse;
             flex-direction: row-reverse;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    margin: 0 auto;
   }
   .container-icon {
     margin-bottom: 10vh;
@@ -257,25 +281,22 @@
     font-size: 5rem;
   }
   h2 {
-    font-size: 2rem;
-  }
-  h3 {
-    font-size: 1.3rem;
-  }
-  h4 {
-    font-size: 1.2rem;
-  }
-  p {
-    font-size: 0.85rem;
+    font-size: 1.7rem;
   }
   .desc {
-    font-size: 1.2rem;
+    font-size: 1rem;
   }
-  .temp {
-    font-size: 1.6rem;
+  p {
+    font-size: 0.8rem;
+  }
+  .temp-min {
+    font-size: 1rem;
+  }
+  .temp-max {
+    font-size: 1.4rem;
   }
   .flex-container {
-    margin: 18px 0 0 0;
+    margin: 15px 0 0 0;
   }
 }
 
@@ -319,7 +340,7 @@
 
 @media screen and (min-width: 1001px) {
   .input {
-    width: 60%;
+    width: 53%;
     height: 38px;
   }
   .btn {
@@ -345,15 +366,113 @@
   }
 }
 
+.error {
+  margin: 0 auto;
+  height: 40px;
+}
+
+.error h4 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 100%;
+  text-transform: capitalize;
+  font-size: 0.8rem;
+  color: red;
+  text-align: left;
+  margin: 0;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 400;
+  letter-spacing: 1px;
+}
+
+@media screen and (min-width: 1001px) {
+  .error {
+    width: 60%;
+  }
+  .error h4 {
+    font-size: 1.2rem;
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  .error {
+    width: 80%;
+  }
+}
+
+.loader {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  height: 60vh;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.loader div {
+  background: #27a5b0;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  margin: 5px;
+  -webkit-animation: wave 1s ease-in-out infinite alternate;
+          animation: wave 1s ease-in-out infinite alternate;
+}
+
+.loader div:nth-child(1) {
+  -webkit-animation-delay: -0.4s;
+          animation-delay: -0.4s;
+}
+
+.loader div:nth-child(2) {
+  -webkit-animation-delay: -0.2s;
+          animation-delay: -0.2s;
+}
+
+@-webkit-keyframes wave {
+  from {
+    -webkit-transform: translateY(-100%);
+            transform: translateY(-100%);
+  }
+  to {
+    -webkit-transform: translateY(100%);
+            transform: translateY(100%);
+  }
+}
+
+@keyframes wave {
+  from {
+    -webkit-transform: translateY(-100%);
+            transform: translateY(-100%);
+  }
+  to {
+    -webkit-transform: translateY(100%);
+            transform: translateY(100%);
+  }
+}
+
 body {
   margin: 0;
   padding: 0;
+  background: black;
 }
 
 .background {
+  position: absolute;
+  top: 0;
+  left: 0;
   width: 100%;
   height: 100vh;
-  background: url(./background.jpg) no-repeat center center fixed;
+  background: url(./background.jpg) repeat center center fixed;
   background-color: rgba(0, 0, 0, 0.5);
   background-blend-mode: multiply;
   background-size: cover;

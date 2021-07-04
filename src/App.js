@@ -1,17 +1,15 @@
 import React from 'react';
-import Infoday from './components/Infoday';
-import Forecast from './components/Forecast';
+import Dashboard from './components/Dashboard';
 import Input from './components/Input';
+import Error from './components/Error';
 
 function App() {
   return (
-    <main className='background'>
+    <>
       <Input />
-      <section>
-        <Infoday />
-        <Forecast />
-      </section>
-    </main>
+      <Error />
+      <Dashboard/>
+    </>
   );
 }
 

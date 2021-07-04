@@ -42,6 +42,7 @@ function Infoday() {
         </div>
         <div className='line'></div>
         <div className='container-info'>
+          <p className='color-subtitle day-date'>today,</p>
           <h2 className='color-title'>
             {name}, <span>{country}</span>
           </h2>
@@ -49,9 +50,9 @@ function Infoday() {
           <p className='color-subtitle'>Wind: {speed}</p>
           <p className='color-subtitle'>Feels Like: {feels_like}°C</p>
           <div className='flex-container'>
-            <h4 className='color-subtitle'>{temp_min}°C</h4>
-            <h3 className='color-title temp'>{temp}°C</h3>
-            <h4 className='color-subtitle'>{temp_max}°C</h4>
+            <h4 className='color-subtitle temp-min'>{temp_min}°C</h4>
+            <h3 className='color-title temp-max'>{temp}°C</h3>
+            <h4 className='color-subtitle temp-min'>{temp_max}°C</h4>
           </div>
         </div>
       </article>
