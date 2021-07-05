@@ -21,3 +21,5 @@ https://openweathermap.org/api/
 ```
 
 ## Author
+
+Lucas Boscariole Silva
