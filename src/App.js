@@ -2,13 +2,17 @@ import React from 'react';
 import Dashboard from './components/Dashboard';
 import Input from './components/Input';
 import Error from './components/Error';
+import Footer from './components/Footer';
 
 function App() {
   return (
     <>
-      <Input />
-      <Error />
-      <Dashboard/>
+      <section className='dashboard'>
+        <Input />
+        <Error />
+        <Dashboard />
+      </section>
+      <Footer />
     </>
   );
 }

@@ -9,8 +9,11 @@ const AppProvider = ({ children }) => {
   const [data, setData] = useState();
   const [query, setQuery] = useState('California');
   const [error, setError] = useState(false);
+  const [loading, setLoading] = useState(false);
   const url = `https://api.openweathermap.org/data/2.5/weather?q=${query}&units=metric&appid=${apikey}`;
+
   const fetchWeather = async () => {
+    setLoading(true);
     try {
       //Day
       const response = await axios(url);
@@ -23,8 +26,10 @@ const AppProvider = ({ children }) => {
       const daily_forecast = forecast.data.daily.slice(0, 4);
       setData(data);
       setForecast(daily_forecast);
+      setLoading(false);
     } catch (error) {
       setError(true);
+      setLoading(false);
     }
   };
 
@@ -34,7 +39,7 @@ const AppProvider = ({ children }) => {
 
   return (
     <AppContext.Provider
-      value={{ forecast, data, setQuery, query, error, setError }}
+      value={{ forecast, data, setQuery, query, error, setError, loading }}
     >
       {children}
     </AppContext.Provider>

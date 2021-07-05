@@ -1,6 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@1,300&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@1,300&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@1,300&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@1,300&display=swap");
 .section-forecast {
   margin: 5vh auto 0 auto;
   display: -webkit-box;
@@ -63,7 +64,7 @@
 @media screen and (min-width: 1001px) {
   .section-forecast {
     width: 60%;
-    height: 300px;
+    min-height: 300px;
   }
   .card-container {
     width: 180px;
@@ -84,7 +85,7 @@
 @media screen and (max-width: 1000px) {
   .section-forecast {
     width: 90%;
-    height: 300px;
+    min-height: 300px;
   }
   .card-container {
     width: 140px;
@@ -354,7 +355,7 @@
 
 @media screen and (max-width: 1000px) {
   .input {
-    width: 70%;
+    width: 75%;
     height: 34px;
   }
   .btn {
@@ -405,17 +406,21 @@
 }
 
 .loader {
+  position: fixed;
+  bottom: 5vh;
+  left: 0;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   width: 100%;
-  height: 60vh;
+  height: 90vh;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  z-index: 9999;
 }
 
 .loader div {
@@ -460,6 +465,71 @@
   }
 }
 
+footer {
+  width: 100%;
+  background: #121212;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+footer h3 {
+  text-transform: capitalize;
+  letter-spacing: 1.5px;
+  color: #f7f7f7;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 300;
+}
+
+footer h3 span {
+  font-weight: 600;
+}
+
+footer a {
+  text-decoration: none;
+  -webkit-transform: 0.8s;
+          transform: 0.8s;
+}
+
+footer a .icon {
+  cursor: pointer;
+  margin-left: 20px;
+  color: #f7f7f7;
+}
+
+footer a .icon:hover {
+  color: #969696;
+}
+
+@media screen and (min-width: 1001px) {
+  footer {
+    margin-top: 1vh;
+    height: 6vh;
+  }
+  footer .icon {
+    font-size: 1.7rem;
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  footer {
+    height: 5vh;
+    margin-top: 2vh;
+  }
+  footer h3 {
+    font-size: 0.8rem;
+  }
+  footer .icon {
+    font-size: 1.1rem;
+  }
+}
+
 body {
   margin: 0;
   padding: 0;
@@ -477,5 +547,9 @@ body {
   background-blend-mode: multiply;
   background-size: cover;
   text-align: center;
+}
+
+.dashboard {
+  min-height: 93vh;
 }
 /*# sourceMappingURL=index.css.map */

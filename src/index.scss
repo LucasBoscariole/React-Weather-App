@@ -1,5 +1,5 @@
 @import './style/forecast', './style/infoday', './style/input', './style/error',
-  './style/loader';
+  './style/loader', './style/footer';
 body {
   margin: 0;
   padding: 0;
@@ -17,4 +17,8 @@ body {
   background-blend-mode: multiply;
   background-size: cover;
   text-align: center;
+}
+
+.dashboard {
+  min-height: 93vh;
 }

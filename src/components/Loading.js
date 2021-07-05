@@ -3,17 +3,18 @@ import { useGlobalContext } from '../context';
 
 function Loading() {
   const { loading } = useGlobalContext();
-  if (loading) {
-    return (
-      <section className='loader'>
-        <div></div>
-        <div></div>
-        <div></div>
-      </section>
-    );
-  } else {
-    return null;
-  }
+  return (
+    <>
+      {' '}
+      {loading && (
+        <section className='loader'>
+          <div></div>
+          <div></div>
+          <div></div>
+        </section>
+      )}{' '}
+    </>
+  );
 }
 
 export default Loading;

@@ -11,9 +11,13 @@ function Day({ index }) {
     'Saturday',
   ];
   let date = new Date().getDay();
+  let stringIndex = date + index + 1;
+  if (stringIndex > 6) {
+    stringIndex = stringIndex - 6;
+  }
   return (
     <>
-      <h4 className='day color-title'>{weekDay[date + index + 1]}</h4>
+      <h4 className='day color-title'>{weekDay[stringIndex]}</h4>
     </>
   );
 }

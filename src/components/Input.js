@@ -10,7 +10,6 @@ function Input() {
     if (city) {
       setQuery(city);
       setCity('');
-      console.log(query);
     }
   };
   return (

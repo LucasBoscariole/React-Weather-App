@@ -1,23 +1,17 @@
-import React from 'react'
+import React from 'react';
 import Infoday from './Infoday';
 import Forecast from './Forecast';
+import Loading from './Loading';
 import { useGlobalContext } from '../context';
 
 function Dashboard() {
- const {forecast} = useGlobalContext()
- if (forecast) {
-  return <>
-   <Infoday/>
-   <Forecast/>
-  </>
- } else {
-  return <div className='loader'>
-   <div></div>
-   <div></div>
-   <div></div>
-  </div>
- }
- 
+  return (
+    <>
+      <Infoday />
+      <Forecast />
+      <Loading />
+    </>
+  );
 }
 
-export default Dashboard
+export default Dashboard;
