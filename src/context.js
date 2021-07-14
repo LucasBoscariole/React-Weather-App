@@ -21,7 +21,7 @@ const AppProvider = ({ children }) => {
       const { lat, lon } = data.coord;
 
       //Forecast
-      const url_forecast = `http://api.openweathermap.org/data/2.5/onecall?lat=${lat}&lon=${lon}&units=metric&exclude=current,minutely,hourly,alerts&appid=${apikey}`;
+      const url_forecast = `https://api.openweathermap.org/data/2.5/onecall?lat=${lat}&lon=${lon}&units=metric&exclude=current,minutely,hourly,alerts&appid=${apikey}`;
       const forecast = await axios(url_forecast);
       const daily_forecast = forecast.data.daily.slice(0, 4);
       setData(data);
