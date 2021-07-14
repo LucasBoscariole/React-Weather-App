@@ -1,7 +1,7 @@
 import React, { useState, useContext, useEffect } from 'react';
 import axios from 'axios';
 
-const apikey = '9765421ef06153319258cbb3b0e6803d';
+const apikey = process.env.REACT_APP_API_KEY;
 const AppContext = React.createContext();
 
 const AppProvider = ({ children }) => {
@@ -35,9 +35,6 @@ const AppProvider = ({ children }) => {
 
   useEffect(() => {
     fetchWeather();
-    console.log(`API KEY: ${apikey}`);
-    console.log(data);
-    console.log(daily_forecast);
   }, [query]);
 
   return (
