@@ -1,7 +1,7 @@
 import React, { useState, useContext, useEffect } from 'react';
 import axios from 'axios';
 
-const apikey = process.env.REACT_APP_API_KEY;
+const apikey = '9765421ef06153319258cbb3b0e6803d';
 const AppContext = React.createContext();
 
 const AppProvider = ({ children }) => {
