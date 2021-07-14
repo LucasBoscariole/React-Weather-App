@@ -35,6 +35,9 @@ const AppProvider = ({ children }) => {
 
   useEffect(() => {
     fetchWeather();
+    console.log(`API KEY: ${apikey}`);
+    console.log(data);
+    console.log(daily_forecast);
   }, [query]);
 
   return (
